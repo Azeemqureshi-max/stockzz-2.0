@@ -1,0 +1,8 @@
+{
+  "name": "MarketLens AI",
+  "description": "Beginner-friendly global stock research, plain-language company analysis, and personal portfolio monitoring dashboard. Research insights only.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

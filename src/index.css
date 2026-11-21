@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --positive: #16a34a;
+  --negative: #dc2626;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #fafaf9;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #fafaf9;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    cursor: default;
+    caret-color: transparent;
+  }
+
+  /* Prevent stray text insertion cursor (caret) on non-editable taps/clicks */
+  *:not(input):not(textarea):not([contenteditable="true"]) {
+    caret-color: transparent;
+  }
+
+  button,
+  a,
+  select,
+  summary,
+  [role="button"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]),
+  textarea,
+  [contenteditable="true"] {
+    caret-color: #0f172a;
+    cursor: text;
+    user-select: text;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
